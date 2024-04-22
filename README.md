@@ -187,6 +187,20 @@ Comment from LSW:
 
 Under these reasons the report remains High seveirty.
 
+**sherlock-admin4**
+
+The protocol team fixed this issue in the following PRs/commits:
+https://github.com/nounsDAO/nouns-monorepo/pull/839
+
+
+**dmitriia**
+
+Fix looks ok: bogus proposals are now filtered out in `proposalDataForRewards()` as eligibility criteria was moved there.
+
+**sherlock-admin4**
+
+The Lead Senior Watson signed off on the fix.
+
 # Issue H-2: Eligibility of cancelled proposals makes it possible for `proposalEligibilityQuorumBps` controlling actor to create multiple eligible proposals, stealing rewards from all others 
 
 Source: https://github.com/sherlock-audit/2024-03-nouns-dao-2-judging/issues/51 
@@ -422,6 +436,20 @@ Comment from LSW:
 
 Under these reasons, the report remains High severity.
 
+**sherlock-admin4**
+
+The protocol team fixed this issue in the following PRs/commits:
+https://github.com/nounsDAO/nouns-monorepo/pull/839
+
+
+**dmitriia**
+
+Fix looks ok: cancelled proposals are now filtered out in `proposalDataForRewards()`.
+
+**sherlock-admin4**
+
+The Lead Senior Watson signed off on the fix.
+
 # Issue M-1: Rewards can be allocated for less than minimal reward period with the help of bogus proposal 
 
 Source: https://github.com/sherlock-audit/2024-03-nouns-dao-2-judging/issues/32 
@@ -560,4 +588,18 @@ I.e. for #32, #46 and #51 set please use the fix from #51 as it covers them all.
 @WangSecurity They are different: 32 is for the avoidance of minimal reward period, 46 is for extending auction revenue span, while 51 is for manipulation with the help of proposal canceling. 
 
 They can have different fixes, but the recommendation is just unified to minimize code changes. Although, the base recommendation for 51 by itself doesn't include the 32 and 46 fixes, but there is an expanded write up of the cumulative change put there, that includes some logic optimization along with these fixes. 
+
+**sherlock-admin4**
+
+The protocol team fixed this issue in the following PRs/commits:
+https://github.com/nounsDAO/nouns-monorepo/pull/839
+
+
+**dmitriia**
+
+Fix looks ok.
+
+**sherlock-admin4**
+
+The Lead Senior Watson signed off on the fix.
 
